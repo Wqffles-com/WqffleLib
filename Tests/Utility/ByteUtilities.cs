@@ -1,9 +1,17 @@
 ﻿using Utility;
 
-namespace Tests;
+namespace Tests.Utility;
 
+/// <summary>
+/// Tests for <see cref="ByteUtilities"/>.
+/// </summary>
+[TestFixture]
 public class ByteUtilities
 {
+    /// <summary>
+    /// Test the <see cref="ByteArrayExtensions.TrimEnd(byte[])"/> method.
+    /// </summary>
+    /// <returns>A byte[] of [ 1, 2, 3, 4, 5 ]</returns>
     [Test(ExpectedResult = new byte[] {1, 2, 3, 4, 5})]
     public byte[] TrimEnd()
     {
@@ -12,6 +20,10 @@ public class ByteUtilities
         return array.TrimEnd();
     }
 
+    /// <summary>
+    /// Test the <see cref="ByteArrayExtensions.TrimStart(byte[])"/> method.
+    /// </summary>
+    /// <returns>A byte[] of [ 1, 2, 3, 4, 5 ]</returns>
     [Test(ExpectedResult = new byte[] { 1, 2, 3, 4, 5 })]
     public byte[] TrimStart()
     {
@@ -20,6 +32,10 @@ public class ByteUtilities
         return array.TrimStart();
     }
 
+    /// <summary>
+    /// Test the <see cref="ByteArrayExtensions.Trim(byte[])"/> method.
+    /// </summary>
+    /// <returns>A byte[] of [ 1, 2, 3, 4, 5 ]</returns>
     [Test(ExpectedResult = new byte[] { 1, 2, 3, 4, 5 })]
     public byte[] Trim()
     {
